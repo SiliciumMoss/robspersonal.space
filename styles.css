@@ -163,7 +163,7 @@ body{
   color: var(--green);
 }
 
-.welcome a{
+.welcome p>a{
   color: var(--green);
 }
 
