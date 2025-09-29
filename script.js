@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Key press listener
   document.addEventListener("keydown", (e) => {
     if (e.key === " " || e.key === "Enter") {
-      e.preventDefault(); // prevent page scrolling on Space
+      e.preventDefault();
       nextMessage();
     }
   });
