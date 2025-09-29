@@ -105,3 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    // This is a mobile device
+    window.location.href = "mobile.html";
+}
