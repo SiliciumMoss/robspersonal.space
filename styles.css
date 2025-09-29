@@ -1,0 +1,339 @@
+@font-face {
+  font-family: DeterminationMono; 
+  src: url(fonts/DeterminationMono.ttf); 
+}
+
+@font-face {
+  font-family: Mercy; 
+  src: url(fonts/MERCY.ttf); 
+}
+
+:root{
+  --green: #90AA86; 
+  --paper-light: #F9F0D9;
+  --paper: #DCCCA3;        
+  --paper-dark: #C3B591; 
+  --border-brown: #C3B591;
+  --text: #5f6b56;    
+  --MercyOrange: #ff7f27;   
+  --MercyYellow: #ffff00;
+}
+
+/* background */
+html,body{
+  height:100%;
+  margin:0;
+}
+body{
+  background: url("images/background_with_lilypads.png") center center / cover repeat, linear-gradient(#f7f6f0,#f7f6f0);
+  font-family: Inter, 'Segoe UI', Roboto, -apple-system, 'Helvetica Neue', Arial;
+  font-weight: 500;
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:24px 40px;
+  overflow: hidden;
+}
+
+.games {
+    background: url("images/test.png") center center / cover repeat, linear-gradient(#f7f6f0,#f7f6f0);
+  }
+
+/* outer frame */
+.page-frame{
+  width:960px;
+  min-height:880px;
+  background: var(--green);
+  border:6px solid var(--green);
+  box-shadow: -1px 3px 5px 2px rgba(0,0,0,0.19);
+-webkit-box-shadow: -1px 3px 5px 2px rgba(0,0,0,0.19);
+-moz-box-shadow: -1px 3px 5px 2px rgba(0,0,0,0.19);
+}
+
+/* top banner placeholder */
+.header-banner {
+  position: relative; 
+  height: auto;
+}
+
+.banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 6px solid rgba(0,0,0,0.03);
+}
+
+/* Navigation */
+.nav-band{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  padding:14px 8px;
+  font-weight:700;
+  letter-spacing:0.6px;
+  color: white;
+}
+.nav-band a{
+  color: white;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:18px;
+}
+
+/* inner area */
+.paper-area{
+  background: var(--paper);
+  margin: 12px; 
+  border: 6px solid var(--paper);
+  padding:18px;
+  min-height:520px;
+  box-sizing:border-box;
+}
+
+.columns{
+  display:flex;
+  gap:18px;
+  margin-top:8px;
+}
+
+/* left column */
+.sidebar{
+  flex: 0 0 160px;
+  background: rgba(255,255,255,0.03);
+  border-radius:10px;
+  padding:12px;
+  min-height:420px;
+  background-color: var(--paper-light);
+  box-shadow: inset 0 0 0 5px var(--border-brown);
+}
+
+/* right column */
+.main{
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 10px;
+  padding:6px 12px;
+  background-color: var(--paper-light);
+  box-shadow: inset 0 0 0 5px var(--border-brown);
+}
+
+/* content card inside main */
+.content-card{
+  background: var(--paper);
+  border-radius:8px;
+  padding:18px 20px;
+  background-color: var(--paper-light);
+}
+
+/* Polaroid */
+
+.polaroid {
+  display: block;
+  max-width: 150%;  
+  height: auto;
+  transform: translate(-50px, -20px);
+}
+
+.polaroid + .caption{
+  text-align:center;
+  font-size:12px;
+  color:var(--text);
+  margin-top:6px;
+}
+
+/* Welcome header */
+.welcome h1{
+  margin:0 0 8px 0;
+  font-size:24px;
+  color: var(--green);
+}
+.welcome p{
+  font-size:13px;
+  line-height:1.45;
+  color: var(--text);
+  margin:0 0 12px 0;
+}
+
+/* line rules */
+.rule{
+  border-top:2px solid;
+  border-color: var(--border-brown);
+  margin:12px 0 18px 0;
+}
+
+/* Footer */
+.paper-footer{
+  margin-top:18px;
+  margin-left:10px;
+  font-size:12px;
+  color: rgba(95,107,86,0.8);
+}
+
+/* Responsive stuff */
+@media (max-width:820px){
+  .page-frame{ width:100%; }
+  .columns{ flex-direction:column; }
+  .sidebar{ flex: none; width:100%; order:2; }
+  .main{ order:1; }
+  .polaroid{ margin-left:12px; transform:none; }
+}
+
+/* states for nav links */
+.nav-band a:focus{ outline:3px dashed rgba(120,140,100,0.35); outline-offset:6px; }
+
+/* center small items */
+.center{ display:flex; align-items:center; justify-content:center; }
+
+/* Theme */
+.theme {
+    position: fixed;
+    max-height: 50px;
+    right:50px;
+    transition: 0.5s;
+}
+
+.theme:active {
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 60px;
+    right:50px;
+    transition: 0.5s;
+}
+
+/* Lilypad */
+.lilypad {
+    position: absolute;
+    display:block;
+}
+
+/* ABOUT */
+
+/* right column */
+
+.flexboxouter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.imgflex{
+  width: 5%;
+  height:5%;
+  background: transparent;
+}
+
+.mp3 {
+    max-height: 275px;
+    position: relative;
+    display:block;
+    left:-100px;
+    top:-80px;
+    transition: .1s;
+}
+
+.idcard {
+    max-width: 275px;
+    position: relative;
+    display:block;
+    left:350px;
+    top:-10px;
+    transition: .1s;
+}
+
+.gb {
+    max-height: 275px;
+    position: relative;
+    display:block;
+    left:600px;
+    top:125px;
+    transition: .1s;
+}
+
+.cam {
+    max-width: 275px;
+    position: relative;
+    display:block;
+    left:-300px;
+    top:300px;
+    transition: .1s;
+}
+
+.musictext {
+    max-height: 200px;
+    position: relative;
+    display:block;
+    left:-15px;
+    top:150px;
+}
+
+.aboutmetext {
+    max-height: 275px;
+    position: relative;
+    display:block;
+    left:363px;
+    top:170px;
+}
+
+.gamestext {
+    max-height: 275px;
+    position: relative;
+    display:block;
+    left:370px;
+    top:300px;
+}
+
+.phototext {
+    max-height: 275px;
+    position: relative;
+    display:block;
+    left:-55px;
+    top:230px;
+}
+
+.aboutsite:hover {
+  max-height: 270px;
+  max-width: 270px;
+  transition: .1s;
+}
+
+/* Textbox */
+
+.textbox {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  min-height: 100px;
+  padding: 16px;
+  border: 5px solid rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+  font-family: "DeterminationMono", "Courier New", monospace;
+  font-size: 25px;
+  line-height: 1.4;
+  color: rgb(255, 255, 255);
+}
+
+
+.mercyh1 {
+  border: 3px solid var(--MercyOrange);
+  background:black;
+  padding:5px;
+  text-align: center !important;
+
+  a {
+  font-family: "Mercy";
+  font-size: 32;
+  color:var(--MercyOrange);
+  }
+}
+
+.mercyh1:hover {
+  border-color: var(--MercyYellow);
+  a { color:var(--MercyYellow);}
+}

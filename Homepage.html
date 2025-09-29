@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="icon" type="image/x-icon" href="images/lilypad.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Inter-Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body id="themetransition">
+  <div class="page-frame" id="themetransition">
+    <!-- Header banner -->
+    <div class="header-banner">
+    <img src="images/banner.png" alt="Site Banner" class="banner-img">
+    <nav class="nav-band">
+        <a href="Homepage.html">Home</a>
+        <a href="AboutMe.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="links.html">Links</a>
+    </nav>
+  </div>
+
+    <!-- Paper area -->
+    <div class="paper-area">
+      <div class="columns">
+        <!-- Sidebar with polaroid -->
+        <aside class="sidebar">
+            <img src="images/polaroid.png" alt="My photo" class="polaroid">
+            <div class="caption">text</div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main">
+          <div class="content-card welcome">
+            <h1>Welcome to my Page!</h1>
+            <div class="rule"></div>
+            <p>Heya! My name is Robin, also known as Rob, and this is my website! I've decided to finally build one, and I'll try to keep it active. (´∇｀)</p>
+
+            <p>My goal with this website is to be a little more consistent with my projects and have a place to talk about what I do! I'll try keep this website simple at first... but probably expand with some crazy stuff later.</p>
+
+            <p>Have a look around (and let me know if you liked it) :)</p>
+
+            <div class="rule"></div>
+          </div>
+        </main>
+      </div>
+
+      
+    </div>
+    <!-- Footer -->
+    <footer class="paper-footer">
+        <p>&copy; 2025 Robin. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Light- / Dark-Mode Button -->
+  <div class="button">
+    <img src="images/moon.png" alt="Dark-Mode" class="theme" onclick="ThemeSwitch()" id="themebutton">
+  </div>
+
+  <!-- Lilypads -->
+  <!--<img src="images/lilypad.png" alt="lilypad" class="lilypad">-->
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
