@@ -9,6 +9,7 @@
 }
 
 :root{
+  --lightgreen: #89DF8C;
   --green: #90AA86; 
   --paper-light: #F9F0D9;
   --paper: #DCCCA3;        
@@ -94,6 +95,11 @@ body{
 
 .sub-band a{
   font-size: 14px;
+}
+
+.currentSub a{
+  font-size: 20px;
+  color: var(--lightgreen);
 }
 
 /* inner area */
@@ -247,6 +253,29 @@ body{
   width: 5%;
   height:5%;
   background: transparent;
+}
+
+.GameContent{
+  width: 40%;
+  background: rgba(255, 255, 255, 0.055);
+  color:white;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.GameContent h1 {
+  font-size: 20px;
+}
+
+.GameContent p {
+  margin-bottom: -10px;
+}
+
+.GameContent img{
+  height:150px;
+  border-radius: 10px;
+  float:left;
+   margin-right: 10px;
 }
 
 .youtubeflex {
